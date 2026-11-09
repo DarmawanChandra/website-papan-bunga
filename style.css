@@ -1,0 +1,489 @@
+/* =========================================================
+   style.css - tampilan website papan bunga
+   Warna putih dan hijau lembut, sama dengan aplikasi tagihan.
+   ========================================================= */
+
+:root {
+  --hijau: #2f7d5b;
+  --hijau-tua: #245f46;
+  --hijau-muda: #e9f4ee;
+  --garis: #d9e6de;
+  --titik: #a9c4b4;
+  --teks: #1f2d27;
+  --abu: #66756d;
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --jarak-atas: 76px; /* tinggi menu atas, supaya judul tidak tertutup saat menu diklik */
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--teks);
+  background: #fff;
+}
+
+h1, h2, h3, p { margin: 0; }
+
+h1, h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--hijau-tua);
+}
+
+img, svg { display: block; max-width: 100%; }
+
+a { color: inherit; }
+
+.wadah {
+  width: min(1120px, 100% - 40px);
+  margin-inline: auto;
+}
+
+main > section { scroll-margin-top: var(--jarak-atas); }
+
+/* ---------- Label kecil bergaya ( TULISAN ) ---------- */
+.label {
+  margin-bottom: 18px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--hijau);
+}
+
+/* ---------- Tombol ---------- */
+.tombol-baris {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.tombol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 1.5px solid var(--hijau);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--hijau-tua);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color .2s, border-color .2s, color .2s;
+}
+.tombol:hover { background: var(--hijau-muda); }
+
+.tombol-utama {
+  background: var(--hijau);
+  color: #fff;
+}
+.tombol-utama:hover {
+  background: var(--hijau-tua);
+  border-color: var(--hijau-tua);
+}
+
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--hijau);
+  outline-offset: 3px;
+}
+
+/* ---------- Menu atas ---------- */
+.kepala {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, .96);
+  border-bottom: 1px solid var(--garis);
+}
+
+.kepala-isi {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 24px;
+  min-height: 72px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--hijau-tua);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo-bunga {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  color: var(--hijau);
+}
+
+.menu {
+  display: flex;
+  gap: 26px;
+}
+
+.menu a {
+  padding: 8px 0;
+  font-size: 12.5px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--abu);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.menu a:hover { color: var(--hijau-tua); }
+
+/* ---------- Pembuka ---------- */
+.pembuka {
+  padding: 72px 0 80px;
+  background: var(--hijau-muda);
+  overflow: hidden;
+}
+
+.pembuka-isi {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.pembuka h1 { font-size: clamp(38px, 5.4vw, 64px); }
+
+.pembuka-sub {
+  max-width: 32em;
+  margin-top: 20px;
+  font-size: 18px;
+  color: var(--abu);
+}
+
+.pembuka-gambar svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 18px 28px rgba(36, 95, 70, .14));
+}
+
+/* ---------- Bagian umum ---------- */
+.bagian { padding: 88px 0; }
+
+.bagian-hijau { background: var(--hijau-muda); }
+
+.bagian h2 {
+  max-width: 16em;
+  margin-bottom: 40px;
+  font-size: clamp(30px, 4.2vw, 46px);
+}
+
+.dua-kolom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
+  gap: 40px;
+  align-items: start;
+}
+.dua-kolom h2 { margin-bottom: 0; }
+
+/* ---------- Tentang dan lowongan ---------- */
+.tentang-teks p,
+.lowongan-teks p {
+  max-width: 38em;
+  font-size: 17px;
+  color: var(--abu);
+}
+.tentang-teks p + p,
+.lowongan-teks p + p { margin-top: 14px; }
+
+.tentang-teks p:first-child {
+  max-width: none;
+  margin-bottom: 26px;
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.35;
+  color: var(--teks);
+}
+
+/* ---------- Cabang dan harga ---------- */
+.daftar-cabang { border-bottom: 1px solid var(--garis); }
+
+.cabang { border-top: 1px solid var(--garis); }
+
+.cabang summary {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.cabang summary::-webkit-details-marker { display: none; }
+
+.cabang-no {
+  flex: none;
+  width: 36px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--hijau);
+}
+
+.cabang-judul {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+}
+
+.cabang-nama {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3.4vw, 36px);
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--hijau-tua);
+}
+.cabang summary:hover .cabang-nama { color: var(--hijau); }
+
+.cabang-wilayah {
+  font-size: 12.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--abu);
+}
+
+/* Tanda plus (tertutup) dan minus (terbuka) */
+.cabang-tanda {
+  position: relative;
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid var(--hijau);
+  border-radius: 50%;
+  background: #fff;
+}
+.cabang-tanda::before,
+.cabang-tanda::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 2px;
+  background: var(--hijau);
+  transform: translate(-50%, -50%);
+}
+.cabang-tanda::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: transform .25s;
+}
+.cabang[open] .cabang-tanda::after { transform: translate(-50%, -50%) rotate(0deg); }
+
+.cabang-isi {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  gap: 48px;
+  padding: 4px 0 44px 54px;
+}
+
+.info-blok + .info-blok { margin-top: 20px; }
+
+.info-judul,
+.harga-grup h3 {
+  margin-bottom: 6px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--hijau);
+}
+
+.jam {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 18px;
+}
+
+.harga-grup + .harga-grup { margin-top: 26px; }
+
+.harga-baris {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.harga-baris .titik {
+  flex: 1;
+  min-width: 24px;
+  border-bottom: 1.5px dotted var(--titik);
+}
+
+.harga-baris .nilai {
+  font-weight: 600;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.catatan-harga {
+  margin-top: 28px;
+  font-size: 11.5px;
+  line-height: 1.7;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--abu);
+}
+
+/* ---------- Galeri ---------- */
+.galeri {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.karya { margin: 0; }
+
+.karya-gambar {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 6 / 5;
+  padding: 18px;
+  border-radius: 18px;
+  background: var(--hijau-muda);
+  overflow: hidden;
+}
+.karya-gambar svg { width: 100%; height: auto; }
+.karya-gambar.ada-foto { padding: 0; }
+.karya-gambar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.karya figcaption {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  font-size: 13px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.karya figcaption span {
+  font-weight: 600;
+  color: var(--hijau);
+}
+
+/* ---------- Bagian bawah ---------- */
+.kaki {
+  padding: 52px 0 32px;
+  background: var(--hijau-tua);
+  color: #e3efe8;
+}
+
+.kaki-atas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.kaki .logo { color: #fff; }
+.kaki .logo-bunga { color: #9fd0b5; }
+
+.sosmed {
+  display: flex;
+  gap: 24px;
+}
+
+.sosmed a {
+  font-size: 12.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.sosmed a:hover { text-decoration: underline; }
+
+.kaki a:focus-visible { outline-color: #fff; }
+
+.hak {
+  margin-top: 34px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, .18);
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #b8d2c3;
+}
+
+.tanpa-js {
+  padding: 20px;
+  text-align: center;
+}
+
+/* ---------- Layar sedang (tablet) ---------- */
+@media (max-width: 900px) {
+  .pembuka { padding: 48px 0 56px; }
+  .pembuka-isi { grid-template-columns: 1fr; gap: 36px; }
+  .pembuka-gambar { max-width: 540px; }
+  .galeri { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+}
+
+/* Menu pindah ke baris kedua supaya tidak berdesakan */
+@media (max-width: 860px) {
+  :root { --jarak-atas: 112px; }
+  .kepala-isi {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    min-height: 0;
+    padding-top: 14px;
+  }
+  .menu {
+    width: 100%;
+    gap: 20px;
+    padding-bottom: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .menu::-webkit-scrollbar { display: none; }
+}
+
+/* ---------- Layar kecil (HP) ---------- */
+@media (max-width: 760px) {
+  .bagian { padding: 64px 0; }
+  .dua-kolom { grid-template-columns: 1fr; gap: 0; }
+  .dua-kolom h2 { margin-bottom: 28px; }
+  .cabang summary { gap: 12px; padding: 20px 0; }
+  .cabang-no { width: auto; }
+  .cabang-isi { grid-template-columns: 1fr; gap: 32px; padding: 0 0 36px; }
+}
+
+@media (max-width: 540px) {
+  .wadah { width: min(1120px, 100% - 32px); }
+  .galeri { grid-template-columns: 1fr; }
+  .tombol { flex: 1 1 auto; }
+}
+
+/* Untuk pengguna yang mematikan animasi */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
