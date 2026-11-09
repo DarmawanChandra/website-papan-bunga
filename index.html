@@ -3,117 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taman Ucapan | Papan Bunga Jakarta &amp; Tangerang</title>
-  <meta name="description" content="Toko papan bunga untuk pernikahan, duka cita, ucapan selamat, dan grand opening. Lihat cabang dan harga, lalu pesan lewat WhatsApp.">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='%232f7d5b' stroke='%23fff'%3E%3Cellipse cx='16' cy='9' rx='4.8' ry='6.8'/%3E%3Cellipse cx='16' cy='9' rx='4.8' ry='6.8' transform='rotate(72 16 16)'/%3E%3Cellipse cx='16' cy='9' rx='4.8' ry='6.8' transform='rotate(144 16 16)'/%3E%3Cellipse cx='16' cy='9' rx='4.8' ry='6.8' transform='rotate(216 16 16)'/%3E%3Cellipse cx='16' cy='9' rx='4.8' ry='6.8' transform='rotate(288 16 16)'/%3E%3C/g%3E%3Ccircle cx='16' cy='16' r='3.8' fill='%23f6c445'/%3E%3C/svg%3E">
+  <title>Taman Ucapan | Papan Bunga Bagan Batu</title>
+  <meta name="description" content="Toko papan bunga di Bagan Batu untuk pernikahan, duka cita, ucapan selamat, dan grand opening. Lihat harga, lalu pesan lewat WhatsApp.">
+  <meta name="theme-color" content="#f9f9f4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='%23111' stroke='%23f9f9f4'%3E%3Cellipse cx='16' cy='9' rx='4.8' ry='6.8'/%3E%3Cellipse cx='16' cy='9' rx='4.8' ry='6.8' transform='rotate(72 16 16)'/%3E%3Cellipse cx='16' cy='9' rx='4.8' ry='6.8' transform='rotate(144 16 16)'/%3E%3Cellipse cx='16' cy='9' rx='4.8' ry='6.8' transform='rotate(216 16 16)'/%3E%3Cellipse cx='16' cy='9' rx='4.8' ry='6.8' transform='rotate(288 16 16)'/%3E%3C/g%3E%3Ccircle cx='16' cy='16' r='3.8' fill='%23f9f9f4'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter+Tight:wght@300;400;500;700&amp;display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Menu atas -->
+  <!-- Logo dan menu. Di laptop keduanya menempel di atas layar. -->
   <header class="kepala">
-    <div class="wadah kepala-isi">
-      <a class="logo" href="#beranda">
-        <svg class="logo-bunga" viewBox="0 0 32 32" aria-hidden="true">
-          <g fill="currentColor" stroke="#fff" stroke-width="1">
-            <ellipse cx="16" cy="9" rx="4.8" ry="6.8"/>
-            <ellipse cx="16" cy="9" rx="4.8" ry="6.8" transform="rotate(72 16 16)"/>
-            <ellipse cx="16" cy="9" rx="4.8" ry="6.8" transform="rotate(144 16 16)"/>
-            <ellipse cx="16" cy="9" rx="4.8" ry="6.8" transform="rotate(216 16 16)"/>
-            <ellipse cx="16" cy="9" rx="4.8" ry="6.8" transform="rotate(288 16 16)"/>
-          </g>
-          <circle cx="16" cy="16" r="3.8" fill="#f6c445"/>
-        </svg>
-        <span data-isi="nama">Taman Ucapan</span>
-      </a>
-      <nav class="menu" aria-label="Menu utama">
-        <a href="#tentang">( Tentang )</a>
-        <a href="#cabang">( Cabang &amp; Harga )</a>
-        <a href="#galeri">( Galeri )</a>
-        <a href="#lowongan">( Kerja Bersama Kami )</a>
-      </nav>
-    </div>
+    <a class="logo" id="logo" href="#beranda">
+      <span class="logo-atas">Taman</span>
+      <span class="logo-bawah">Ucapan</span>
+    </a>
+    <nav class="menu" aria-label="Menu utama">
+      <a href="#beranda">( Beranda / Tentang )</a>
+      <a href="#lokasi">( Lokasi &amp; Harga )</a>
+      <a href="#karier">( Kerja Bersama Kami )</a>
+    </nav>
   </header>
 
   <main>
-    <!-- Pembuka -->
+    <!-- Pembuka: judul besar, foto berganti, dan tentang kami -->
     <section id="beranda" class="pembuka">
-      <div class="wadah pembuka-isi">
-        <div class="pembuka-teks">
-          <p class="label" id="pembuka-label"></p>
-          <h1 id="pembuka-judul"></h1>
-          <p class="pembuka-sub" id="pembuka-sub"></p>
-          <div class="tombol-baris">
-            <a class="tombol tombol-utama" href="#cabang">Pesan Sekarang</a>
-            <a class="tombol" href="#galeri">Lihat Galeri</a>
+      <h1 class="judul-besar" data-kursor="besar" aria-label="Papan bunga untuk setiap momen penting.">
+        <span class="baris baris-1">P<em>A</em>PAN BUNGA</span>
+        <span class="baris baris-2"><em>untuk</em> SETIAP</span>
+        <span class="baris baris-3"><span>MOMEN</span> <span>PENTING.</span></span>
+      </h1>
+
+      <div class="pembuka-bawah">
+        <a class="kotak-koleksi" href="#koleksi">
+          <span>(Lihat koleksi</span>
+          <span>papan bunga kami)</span>
+        </a>
+        <div class="pembuka-foto" id="pembuka-foto" aria-hidden="true"></div>
+        <div class="tentang">
+          <div class="tentang-teks" id="tentang-teks"></div>
+          <div class="tentang-aksi">
+            <a class="tombol-garis" id="tombol-pesan" href="#lokasi">( Pesan Sekarang )</a>
+            <div class="sosmed" id="sosmed-atas"></div>
           </div>
         </div>
-        <div class="pembuka-gambar" id="pembuka-gambar"></div>
       </div>
     </section>
 
-    <!-- Tentang kami -->
-    <section id="tentang" class="bagian">
-      <div class="wadah dua-kolom">
-        <p class="label">( Tentang Kami )</p>
-        <div class="tentang-teks" id="tentang-teks"></div>
-      </div>
+    <!-- Lokasi dan harga (hanya satu tempat) -->
+    <section id="lokasi" class="lokasi">
+      <h2 class="judul-bagian">KUNJUNGI <em>kami</em> DI <span class="huruf-besar" data-isi="lokasi">Bagan Batu</span></h2>
+      <div class="panel" id="panel-lokasi"></div>
     </section>
 
-    <!-- Cabang dan harga -->
-    <section id="cabang" class="bagian bagian-hijau">
-      <div class="wadah">
-        <p class="label">( Cabang &amp; Harga )</p>
-        <h2>Semua cabang <span data-isi="nama">Taman Ucapan</span></h2>
-        <div class="daftar-cabang" id="daftar-cabang"></div>
-      </div>
-    </section>
-
-    <!-- Galeri -->
-    <section id="galeri" class="bagian">
-      <div class="wadah">
-        <p class="label">( Galeri )</p>
-        <h2>Contoh papan buatan kami</h2>
-        <div class="galeri" id="daftar-galeri"></div>
-      </div>
+    <!-- Koleksi papan: pita gambar yang bergerak pelan -->
+    <section id="koleksi" class="koleksi">
+      <h2 class="judul-bagian">KOLEKSI <em>papan</em> BUNGA KAMI</h2>
+      <div class="pita" id="pita-koleksi"></div>
     </section>
 
     <!-- Lowongan kerja -->
-    <section id="lowongan" class="bagian bagian-hijau">
-      <div class="wadah dua-kolom">
-        <div>
-          <p class="label">( Kerja Bersama Kami )</p>
-          <h2>Tumbuh bersama tim <span data-isi="nama">Taman Ucapan</span></h2>
-        </div>
-        <div class="lowongan-teks" id="lowongan-teks"></div>
-      </div>
+    <section id="karier" class="karier">
+      <h2 class="judul-bagian">KARIER <em>di</em> <span class="huruf-besar" data-isi="nama">Taman Ucapan</span></h2>
+      <div class="karier-teks" id="karier-teks"></div>
     </section>
   </main>
 
   <!-- Bagian bawah -->
   <footer class="kaki">
-    <div class="wadah">
-      <div class="kaki-atas">
-        <a class="logo" href="#beranda">
-          <svg class="logo-bunga" viewBox="0 0 32 32" aria-hidden="true">
-            <g fill="currentColor" stroke="#245f46" stroke-width="1">
-              <ellipse cx="16" cy="9" rx="4.8" ry="6.8"/>
-              <ellipse cx="16" cy="9" rx="4.8" ry="6.8" transform="rotate(72 16 16)"/>
-              <ellipse cx="16" cy="9" rx="4.8" ry="6.8" transform="rotate(144 16 16)"/>
-              <ellipse cx="16" cy="9" rx="4.8" ry="6.8" transform="rotate(216 16 16)"/>
-              <ellipse cx="16" cy="9" rx="4.8" ry="6.8" transform="rotate(288 16 16)"/>
-            </g>
-            <circle cx="16" cy="16" r="3.8" fill="#f6c445"/>
-          </svg>
-          <span data-isi="nama">Taman Ucapan</span>
-        </a>
-        <nav class="sosmed" id="sosmed" aria-label="Media sosial"></nav>
-      </div>
-      <p class="hak" id="hak-cipta"></p>
-    </div>
+    <p class="hak" id="hak-cipta"></p>
+    <div class="sosmed" id="sosmed-bawah"></div>
   </footer>
 
   <noscript><p class="tanpa-js">Nyalakan JavaScript supaya isi website tampil.</p></noscript>
